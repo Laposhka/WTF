@@ -1,0 +1,230 @@
+2022-09-13 07:04:37 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:7
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:06:04 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:7
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:06:35 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:7
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:07:08 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:7
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:07:17 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:7
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:07:25 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:7
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:07:49 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:7
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:08:01 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:7
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:09:41 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:8
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:09:58 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:8
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:10:18 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:8
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:10:25 error: uncaughtException: await is only valid in async functions and the top level bodies of modules
+D:\Development\node.js\WTF\WTF\src\models\acronym.model.ts:8
+    let content = await fs.readFile(DB_FILE_URL);
+                  ^^^^^
+
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1055:15)
+    at Module._compile (node:internal/modules/cjs/loader:1090:27)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+2022-09-13 07:43:12 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/acronym.controller.ts[0m:[93m13[0m:[93m22[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m13[0m         [ele.acronym]: ele.definition,
+[7m  [0m [91m                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/acronym.controller.ts[0m:[93m13[0m:[93m22[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m13[0m         [ele.acronym]: ele.definition,
+[7m  [0m [91m                     ~[0m
+
+    at createTSError (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:863:19)
+    at D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1180:10)
+    at Object.require.extensions.<computed> [as .ts] (D:\Development\node.js\WTF\WTF\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1004:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:839:12)
+    at Module.require (node:internal/modules/cjs/loader:1028:19)
+2022-09-13 08:43:22 error: [PUT] /acronym/KCU >> StatusCode:: 400, Message:: acronym must be a string
+2022-09-13 08:44:03 error: [POST] /acronym >> StatusCode:: 409, Message:: This acronym KCU already exists
+2022-09-13 08:44:03 error: [POST] /acronym >> StatusCode:: 409, Message:: This acronym KCU already exists
+2022-09-13 08:45:43 error: [POST] /acronym >> StatusCode:: 409, Message:: This acronym KCU already exists
+2022-09-13 08:45:43 error: [PUT] /acronym/KCU >> StatusCode:: 400, Message:: acronym must be a string
+2022-09-13 08:48:17 error: [PUT] /acronym/KCU >> StatusCode:: 400, Message:: acronym must be a string
+2022-09-13 08:51:06 error: [PUT] /acronym/KCU >> StatusCode:: 409, Message:: This acronym KCU doesn't exist
+2022-09-13 08:52:25 error: [POST] /acronym >> StatusCode:: 409, Message:: This acronym KCU already exists
+2022-09-13 08:53:03 error: [PUT] /acronym/KCU >> StatusCode:: 409, Message:: This acronym KCU doesn't exist
+2022-09-13 08:56:14 error: [PUT] /acronym/KCU >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'acronym')
+2022-09-13 09:03:37 error: [DELETE] /acronym/KCU >> StatusCode:: 400, Message:: acronym must be a string, definition must be a string
+2022-09-13 09:04:39 error: [POST] /acronym >> StatusCode:: 409, Message:: This acronym KCU already exists
+2022-09-13 09:04:39 error: [POST] /acronym >> StatusCode:: 409, Message:: This acronym KCU already exists
+2022-09-13 09:05:02 error: [DELETE] /acronym/KCU >> StatusCode:: 400, Message:: acronym must be a string, definition must be a string
+2022-09-13 09:18:59 error: [POST] /acronym >> StatusCode:: 409, Message:: This acronym KCU already exists
+2022-09-13 09:19:00 error: [POST] /acronym >> StatusCode:: 409, Message:: This acronym KCU already exists

@@ -1,0 +1,108 @@
+tags:
+- name: acronyms
+  description: acronyms API
+
+paths:
+# [GET] acronym
+  /acronym:
+    get:
+      tags:
+      - acronym
+      summary: Find acronyms
+      parameters:
+      - from: query
+        limit: query
+        search: query
+
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+
+# [POST] acronym
+    post:
+      tags:
+      - acronym
+      summary: Add Acronym
+      parameters:
+      - acronym: body
+        definition: body
+        description: acronym Data
+        required: true
+        schema:
+          $ref: '#/definitions/acronym'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [PUT] acronym/acronym
+    put:
+      tags:
+      - acronym
+      summary: Update acronym
+      parameters:
+      - name: acronym
+        in: path
+        description: acronym Id
+        required: true
+        type: integer
+      - name: definition
+        in: body
+        description: acronym Data
+        required: true
+        schema:
+          $ref: '#/definitions/acronym'
+      responses:
+        200:
+          description: 'OK'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# [DELETE] acronym/acronym
+    delete:
+      tags:
+      - acronyms
+      summary: Delete Acronym
+      parameters:
+      - name: acronym
+        in: path
+        description: acronym
+        required: true
+        type: integer
+      responses:
+        200:
+          description: 'OK'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+# definitions
+definitions:
+  users:
+    type: object
+    required:
+        - acronym
+        - definition
+    properties:
+      acronym:
+        type: string
+        description: abb
+      definition:
+        type: string
+        description: long definition
+
+schemes:
+ - https
+ - http

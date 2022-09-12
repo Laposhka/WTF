@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "D:\\Development\\node.js\\WTF\\WTF\\src\\logs\\error\\.ce0e85d8fabde6fd7a6ec8c06756c9b1e5933436-audit.json",
+    "files": [
+        {
+            "date": 1663016676933,
+            "name": "D:\\Development\\node.js\\WTF\\WTF\\src\\logs\\error\\2022-09-13.log",
+            "hash": "c2710d7c883ba3ce351d0875dfb29beef075dd51da6f8c0fa2c0264408527ec9"
+        }
+    ],
+    "hashType": "sha256"
+}
