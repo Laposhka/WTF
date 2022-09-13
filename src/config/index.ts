@@ -1,12 +1,9 @@
 import { config } from 'dotenv';
 config({
-  path: `.env.${
-    process.env.NODE_ENV || 'development'
-  }.local`,
+  path: `.env.${process.env.NODE_ENV || 'development'}.local`,
 });
 
-export const CREDENTIALS =
-  process.env.CREDENTIALS === 'true';
+export const CREDENTIALS = process.env.CREDENTIALS === 'true';
 export const {
   NODE_ENV,
   PORT,
@@ -15,4 +12,4 @@ export const {
   LOG_DIR,
   ORIGIN,
 } = process.env;
-export const DB_FILE_URL = 'src/db/db-fake.json';
+export const DB_FILE_URL = 'src/db/db.json';

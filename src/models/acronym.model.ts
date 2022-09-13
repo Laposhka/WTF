@@ -2,7 +2,7 @@ import { readFileSync } from 'fs';
 import { Acronym } from 'interfaces/acronym.interface';
 const { DB_FILE_URL } = require('../config');
 
-let allData: Array<Acronym> = [];
+const allData: Array<Acronym> = [];
 
 try {
   const rawJson = readFileSync(DB_FILE_URL);

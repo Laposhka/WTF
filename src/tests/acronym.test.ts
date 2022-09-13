@@ -136,17 +136,11 @@ describe('Testing Acronym Service', () => {
       const search = '0';
 
       const expectData: Acronym[] = allData
-        .filter(ele =>
-          ele.acronym.includes(search),
-        )
+        .filter(ele => ele.acronym.includes(search))
         .slice(from, from + limit);
 
       console.log(
-        await acronymService.searchAcronym(
-          from,
-          limit,
-          search,
-        ),
+        await acronymService.searchAcronym(from, limit, search),
       );
     });
   });

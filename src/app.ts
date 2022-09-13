@@ -36,18 +36,10 @@ class App {
 
   public listen() {
     this.app.listen(this.port, () => {
-      logger.info(
-        `=================================`,
-      );
-      logger.info(
-        `======= ENV: ${this.env} =======`,
-      );
-      logger.info(
-        `🚀 App listening on the port ${this.port}`,
-      );
-      logger.info(
-        `=================================`,
-      );
+      logger.info(`=================================`);
+      logger.info(`======= ENV: ${this.env} =======`);
+      logger.info(`🚀 App listening on the port ${this.port}`);
+      logger.info(`=================================`);
     });
   }
 
@@ -67,9 +59,7 @@ class App {
     this.app.use(helmet());
     this.app.use(compression());
     this.app.use(express.json());
-    this.app.use(
-      express.urlencoded({ extended: true }),
-    );
+    this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
   }
 
