@@ -1,4 +1,4 @@
-export interface Acronym {
+export interface IAcronym {
   acronym: string;
   definition: string;
 }

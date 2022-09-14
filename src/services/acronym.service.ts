@@ -1,14 +1,12 @@
-import { Acronym } from 'interfaces/acronym.interface';
+import { IAcronym } from 'interfaces/acronym.interface';
 import { HttpException } from '@exceptions/HttpException';
-import acronymModel from '@models/acronym.model';
+import AcronymModel from '@/models/acronym.model';
 import { isEmpty } from '@utils/util';
 
 class AcronymService {
-  public allData: Array<Acronym> = acronymModel;
-
-  public async getAllData(): Promise<Acronym[]> {
-    const acronyms: Acronym[] = this.allData;
-    return acronyms;
+  public async getAllData(): Promise<IAcronym[]> {
+    const docs: IAcronym[] = await AcronymModel.find();
+    return docs;
   }
 
   public async searchAcronym(
@@ -17,94 +15,89 @@ class AcronymService {
     search: string,
   ) {
     console.log(from, limit, search);
-    const findAcronyms: Array<Acronym> =
-      this.allData
-        .filter(element =>
-          element.acronym.includes(search),
-        )
-        .slice(from, from + limit);
 
-    console.log(findAcronyms);
+    let findAcronyms: IAcronym[] = await AcronymModel.find({
+      acronym: {
+        $regex: new RegExp(`${search}`),
+      },
+    });
+
+    findAcronyms = [...findAcronyms.slice(from, from + limit)];
+    console.log(findAcronyms.length);
+
     return findAcronyms;
   }
 
-  public async createAcronym(
-    newData: Acronym,
-  ): Promise<Acronym> {
+  public async createAcronym(newData: IAcronym): Promise<IAcronym> {
     if (isEmpty(newData))
-      throw new HttpException(
-        400,
-        'newData is empty',
-      );
+      throw new HttpException(400, 'newData is empty');
 
-    const findAcronym: Acronym =
-      this.allData.find(
-        element =>
-          element.acronym === newData.acronym,
-      );
-    if (findAcronym)
+    const findAcronym: IAcronym = await AcronymModel.findOne({
+      acronym: newData.acronym,
+    });
+    if (findAcronym) {
       throw new HttpException(
         409,
         `This acronym ${newData.acronym} already exists`,
       );
+    }
 
-    this.allData = [...this.allData, newData];
-
+    const newAcronym = new AcronymModel(newData);
+    await newAcronym.save();
     return newData;
   }
 
   public async updateAcronym(
     acronym: string,
     definition: string,
-  ): Promise<Acronym[]> {
-    if (isEmpty(definition))
-      throw new HttpException(
-        400,
-        'newData is empty',
-      );
+  ): Promise<IAcronym[]> {
+    if (isEmpty(definition)) {
+      throw new HttpException(400, 'newData is empty');
+    }
 
-    const findAcronym: Acronym =
-      this.allData.find(
-        element => element.acronym === acronym,
-      );
-    if (!findAcronym)
+    console.log('found', acronym);
+
+    const findAcronyms = await AcronymModel.find({
+      acronym: acronym,
+    });
+    if (findAcronyms.length == 0) {
       throw new HttpException(
         409,
         `This acronym ${acronym} doesn't exist`,
       );
+    }
 
-    const toUpdate: Acronym[] =
-      this.allData.filter(
-        (ele: Acronym) => ele.acronym === acronym,
-      );
+    findAcronyms.forEach(ele => {
+      ele.definition = definition;
+    });
 
-    const updatedAcronyms: Acronym[] =
-      toUpdate.map(ele => {
-        ele.definition = definition;
-        return ele;
-      });
-
-    return updatedAcronyms;
+    await AcronymModel.updateMany(
+      {
+        acronym: acronym,
+      },
+      {
+        definition: definition,
+      },
+    );
+    return findAcronyms;
   }
 
-  public async deleteAcronym(
-    acronym: string,
-  ): Promise<Acronym[]> {
-    const findAcronym: Acronym =
-      this.allData.find(
-        element => element.acronym === acronym,
-      );
-    if (!findAcronym)
+  public async deleteAcronym(acronym: string): Promise<IAcronym[]> {
+    const findAcronyms = await AcronymModel.find({
+      acronym: acronym,
+    });
+    if (findAcronyms.length == 0) {
       throw new HttpException(
         409,
         `This acronym ${acronym} doesn't exist`,
       );
+    }
 
-    const deleteAcronymData: Acronym[] =
-      this.allData.filter(
-        element => element.acronym !== acronym,
-      );
-    return deleteAcronymData;
+    await AcronymModel.deleteMany({
+      acronym: acronym,
+    });
+
+    return findAcronyms;
   }
 }
 

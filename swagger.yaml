@@ -10,9 +10,15 @@ paths:
       - acronym
       summary: Find acronyms
       parameters:
-      - from: query
-        limit: query
-        search: query
+      - name: from
+        in: query
+        type: integer
+      - name: limit
+        in: query
+        type: integer
+      - name: search
+        in: query
+        type: string
 
       responses:
         200:
@@ -26,12 +32,23 @@ paths:
       - acronym
       summary: Add Acronym
       parameters:
-      - acronym: body
-        definition: body
-        description: acronym Data
+      - in: body
+        name: acronym
+        description: acronym, definition
         required: true
         schema:
-          $ref: '#/definitions/acronym'
+          type: object
+          required:
+            - acronym
+            - definition
+          properties:
+            acronym:
+              type: string
+              description: abb
+            definition:
+              type: string
+              description: long definition
+
       responses:
         201:
           description: 'Created'
@@ -42,6 +59,7 @@ paths:
         500:
           description: 'Server Error'
 
+  /acronym/{acronym}:
 # [PUT] acronym/acronym
     put:
       tags:
@@ -50,15 +68,23 @@ paths:
       parameters:
       - name: acronym
         in: path
-        description: acronym Id
+        description: acronym
         required: true
-        type: integer
+        type: string
+
       - name: definition
         in: body
-        description: acronym Data
+        description: definition
         required: true
         schema:
-          $ref: '#/definitions/acronym'
+          type: object
+          required:
+            -definition
+          properties:
+            definition:
+              type: string
+              description: long definition
+
       responses:
         200:
           description: 'OK'
@@ -79,7 +105,7 @@ paths:
         in: path
         description: acronym
         required: true
-        type: integer
+        type: string
       responses:
         200:
           description: 'OK'

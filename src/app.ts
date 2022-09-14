@@ -7,6 +7,8 @@ import hpp from 'hpp';
 import morgan from 'morgan';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
+import mongoose from 'mongoose';
+import { DB_MONGO_URL } from '@config';
 import {
   NODE_ENV,
   PORT,
@@ -41,6 +43,16 @@ class App {
       logger.info(`🚀 App listening on the port ${this.port}`);
       logger.info(`=================================`);
     });
+  }
+
+  public async connectDB() {
+    try {
+      const conn = await mongoose.connect(DB_MONGO_URL);
+      console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+      console.log('DB connection failed', error);
+      process.exit(1);
+    }
   }
 
   public getServer() {

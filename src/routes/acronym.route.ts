@@ -14,10 +14,23 @@ class AcronymRoute implements Routes {
   }
 
   private initializeRoutes() {
-    this.router.get(`${this.path}`, this.acronymController.searchAcronym);
-    this.router.post(`${this.path}`, validationMiddleware(CreateAcronymDto, 'body'), this.acronymController.createAcronym);
-    this.router.put(`${this.path}/:acronym`, validationMiddleware(CreateAcronymDto, 'body'), this.acronymController.updateAcronym);
-    this.router.delete(`${this.path}/:acronym`, this.acronymController.deleteAcronym);
+    this.router.get(
+      `${this.path}`,
+      this.acronymController.searchAcronym,
+    );
+    this.router.post(
+      `${this.path}`,
+      validationMiddleware(CreateAcronymDto, 'body'),
+      this.acronymController.createAcronym,
+    );
+    this.router.put(
+      `${this.path}/:acronym`,
+      this.acronymController.updateAcronym,
+    );
+    this.router.delete(
+      `${this.path}/:acronym`,
+      this.acronymController.deleteAcronym,
+    );
   }
 }
 

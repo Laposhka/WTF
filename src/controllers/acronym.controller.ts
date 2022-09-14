@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { CreateAcronymDto } from '@dtos/acronym.dto';
-import { Acronym } from '@interfaces/acronym.interface';
+import { IAcronym } from '@interfaces/acronym.interface';
 import AcronymService from '@services/acronym.service';
 import { readFileSync, writeFileSync } from 'fs';
 import { DB_FILE_URL } from '@/config';
@@ -9,20 +9,14 @@ import { convertToObject } from '@/utils/acronym';
 class AcronymController {
   public acronymService = new AcronymService();
 
-  private updateDB = async () => {
-    const results: Object[] = convertToObject(
-      this.acronymService.allData,
-    );
-    writeFileSync(DB_FILE_URL, JSON.stringify(results));
-  };
-
   public searchAcronym = async (
     req: Request,
     res: Response,
     next: NextFunction,
   ): Promise<void> => {
     let from = 0;
-    let limit: number = this.acronymService.allData.length;
+    let limit: number = (await this.acronymService.getAllData())
+      .length;
     let search = '';
 
     if (req.query.from) from = Number(req.query.from);
@@ -30,10 +24,9 @@ class AcronymController {
     if (req.query.search) search = String(req.query.search);
 
     try {
-      const findAcronyms: Acronym[] =
+      const findAcronyms: IAcronym[] =
         await this.acronymService.searchAcronym(from, limit, search);
 
-      this.updateDB();
       res.status(200).json({
         data: convertToObject(findAcronyms),
         message: 'find',
@@ -49,11 +42,11 @@ class AcronymController {
     next: NextFunction,
   ): Promise<void> => {
     try {
-      const acronymData: CreateAcronymDto = req.body;
-      const createAcronymData: Acronym =
+      const acronymData: IAcronym = req.body;
+      console.log(acronymData);
+      const createAcronymData: IAcronym =
         await this.acronymService.createAcronym(acronymData);
 
-      this.updateDB();
       res.status(201).json({
         data: convertToObject([createAcronymData]),
         message: 'created',
@@ -71,10 +64,9 @@ class AcronymController {
     try {
       const { acronym } = req.params;
       const { definition } = req.body;
-      const updateAcronymData: Acronym[] =
+      const updateAcronymData: IAcronym[] =
         await this.acronymService.updateAcronym(acronym, definition);
 
-      this.updateDB();
       res.status(200).json({
         data: convertToObject(updateAcronymData),
         message: 'updated',
@@ -91,10 +83,9 @@ class AcronymController {
   ): Promise<void> => {
     try {
       const { acronym } = req.params;
-      const deleteAcronymData: Acronym[] =
+      const deleteAcronymData: IAcronym[] =
         await this.acronymService.deleteAcronym(acronym);
 
-      this.updateDB();
       res.status(200).json({
         data: convertToObject(deleteAcronymData),
         message: 'deleted',

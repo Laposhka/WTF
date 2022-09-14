@@ -13,3 +13,5 @@ export const {
   ORIGIN,
 } = process.env;
 export const DB_FILE_URL = 'src/db/db.json';
+export const DB_MONGO_URL =
+  'mongodb+srv://laposhkabolt:Laposhka1717@cluster0.ss8ntdg.mongodb.net/WTF';

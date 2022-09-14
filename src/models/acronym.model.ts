@@ -1,23 +1,17 @@
-import { readFileSync } from 'fs';
-import { Acronym } from 'interfaces/acronym.interface';
-const { DB_FILE_URL } = require('../config');
+import { Schema, model } from 'mongoose';
+import { IAcronym } from '../interfaces/acronym.interface';
 
-const allData: Array<Acronym> = [];
+const acronymSchema = new Schema<IAcronym>({
+  acronym: {
+    type: String,
+    required: true,
+  },
+  definition: {
+    type: String,
+    required: true,
+  },
+});
 
-try {
-  const rawJson = readFileSync(DB_FILE_URL);
-  const content: Array<Object> = JSON.parse(String(rawJson));
+const Acronym = model<IAcronym>('Acronym', acronymSchema);
 
-  // console.log(process.cwd())
-  content.forEach(element => {
-    const key = Object.keys(element)[0];
-    allData.push({
-      acronym: key,
-      definition: element[key],
-    });
-  });
-} catch (error) {
-  console.log(error);
-}
-
-export default allData;
+export default Acronym;
